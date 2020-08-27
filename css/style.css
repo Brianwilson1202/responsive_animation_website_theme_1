@@ -14,7 +14,7 @@ html, body {
   --text-light: #686666da;
   --bg-color: #0f0f0f;
   --white: #ffffff;
-  --midnight: #014f55;
+  --midnight: #001b2a;
 
   /* gradient color */
   --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
@@ -81,10 +81,10 @@ p {
 
 /* navbar */
 .nav {
-  background: white;
+  background: var(--sky);
   padding: 0 2rem;
   height: 0rem;
-  min-height: 10vh;
+  min-height: 70px;
   overflow: hidden;
   transition: height 1s ease-in-out;
 }
@@ -119,6 +119,9 @@ p {
 .nav .nav-items {
   display: flex;
   margin: 0;
+  padding: 0;
+  text-align: center;
+
 }
 
 .nav .nav-items .nav-link {
@@ -145,13 +148,14 @@ p {
 }
 .nav .social {
   padding: 1.4rem 0;
+  text-align: center;
 }
 
 .nav .social i {
   padding: 0.2rem;
 }
 .nav .social i:hover {
-  color: #a1c4cf;
+  color: #fff;
 }
 
 
@@ -163,19 +167,25 @@ p {
 /* Site Title */
 
 main .site-title {
-  background: url('../assets/background-image.jpeg');
+  background: url('../assets/background-image.jpg');
   background-size: cover;
-  height: 110vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
 }
 main .site-title .site-background {
-  padding-top: 10vh;
+  padding-top: 30vh;
   text-align: center;
   color: var(--white);
 }
 main .site-title h1, h3 {
   margin: .3rem;
+}
+main .site-title h1 {
+  font-size: 55px;
+}
+main .site-title h3 {
+  font-size: 30px;
 }
 main .site-title .btn {
   margin: 1.8rem;
@@ -250,6 +260,8 @@ section .container .owl-nav {
 
 /* Site Content */
 main .site-content {
+  max-width: 1400px;
+  margin: auto;
   display: grid;
   grid-template-columns: 70% 30%;
 }
@@ -276,6 +288,8 @@ main .site-content .post-image div {
 }
 main .site-content .post-content > .post-image .img {
   width: 100%;
+  transition: 0.3s;
+  opacity: 0.5;
 }
 
 main .site-content .post-content > .post-image .img:hover {
@@ -354,7 +368,7 @@ main .post-content .post-title a {
 }
 
 .site-content .sidebar .newsletter {
-  padding-top: 10rem;
+  padding-top: 3rem;
 }
 .site-content .sidebar .newsletter .form-element {
   padding: .5rem 2rem;
